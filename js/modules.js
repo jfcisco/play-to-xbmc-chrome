@@ -414,6 +414,25 @@ var MyCloudPlayersModule = {
     }
 };
 
+// TODO: Complete Netflix module
+/*
+    Patterning code after: https://github.com/khloke/play-to-xbmc-chrome/pull/148/commits/6889f4764a9d85edff1a7c6cc6526e28e137f84e
+*/
+var NetflixModule = {
+    canHandleUrl: function(url) {
+        var validPatterns = [
+          // TODO: Check valid patterns for Netflix  
+        ];
+        return urlMatchesOneOfPatterns(url, validPatterns);
+    },
+    getMediaType: function() {
+        return 'video';
+    },
+    getPluginPath: function(url, getAddOnVersion, callback) {
+        
+    } 
+}
+
 var PornhubModule = {
     canHandleUrl: function(url) {
         var validPatterns = [
@@ -916,6 +935,7 @@ var allModules = [
     MixcloudModule,
     Mp4UploadModule,
     MyCloudPlayersModule,
+    NetflixModule,
     PornhubModule,
     RuutuModule,
     SeasonvarModule,
